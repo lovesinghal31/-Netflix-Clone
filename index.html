@@ -36,14 +36,17 @@
             <div class="p1c">
                 <h1>Unlimited movies, TV shows and more</h1>
                 <h3>Watch anywhere. Cancel anytime.</h3>
-                <div class="form">
+                <form class="form" id="email-signup-form" novalidate>
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                     <div class="input">
-                        <input type="email" name="email" id="email" placeholder="Email address" class="p1i1">
-                        <button type="button" class="p1i1">Get Started <img src="assets/svgs/right-caret.svg"
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <input type="email" name="email" id="email" placeholder="Email address" class="p1i1"
+                            aria-describedby="email-feedback" required>
+                        <button type="submit" class="p1i1">Get Started <img src="assets/svgs/right-caret.svg"
                                 alt="right-caret"></button>
                     </div>
-                </div>
+                    <p id="email-feedback" class="form-message" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </div>
@@ -58,7 +61,7 @@
                 <div class="page2vdo">
                     <img src="assets/images/tv.png" alt="tv" width="100%">
                     <div class="vdoframe">
-                        <video autoplay muted loop playsinlin>
+                        <video autoplay muted loop playsinline>
                             <source src="assets/videos/video-tv-in-0819.m4v">
                         </video>
                     </div>
@@ -102,7 +105,7 @@
                 <div class="page5vdo">
                     <img src="assets/images/device-pile-in.png" alt="divice" width="100%">
                     <div class="vdoframe-p5">
-                        <video autoplay muted loop playsinlin>
+                        <video autoplay muted loop playsinline>
                             <source src="assets/videos/video-devices-in.m4v">
                         </video>
                     </div>
@@ -131,76 +134,101 @@
                 <h2>Frequently Asked Questions</h2>
                 <div class="faqs">
                     <ul class="faqs-list">
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
+                                <button type="button" class="lihbtn" id="faq-question-1" aria-expanded="false"
+                                    aria-controls="faq-answer-1">
                                     <span>What is Netflix?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV
+                                    shows, movies, anime, documentaries and more on thousands of internet-connected
+                                    devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad — all
+                                    for one low monthly price. There's always something new to discover, and new TV
+                                    shows and movies are added every week.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
+                                <button type="button" class="lihbtn" id="faq-question-2" aria-expanded="false"
+                                    aria-controls="faq-answer-2">
                                     <span>How much does Netflix cost?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
+                                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device,
+                                    all for one fixed monthly fee. Plans range from affordable options to premium
+                                    plans. No extra costs, no contracts.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
-                                    <span>Where can i watch?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                <button type="button" class="lihbtn" id="faq-question-3" aria-expanded="false"
+                                    aria-controls="faq-answer-3">
+                                    <span>Where can I watch?</span>
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
+                                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on
+                                    the web at netflix.com from your personal computer or on any internet-connected
+                                    device that offers the Netflix app.</p>
+                                <p>You can also download your favorite shows with the iOS or Android app. Use
+                                    downloads to watch while you're on the go and without an internet connection.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
-                                    <span>How do i cancel?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                <button type="button" class="lihbtn" id="faq-question-4" aria-expanded="false"
+                                    aria-controls="faq-answer-4">
+                                    <span>How do I cancel?</span>
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
+                                <p>Netflix is flexible. There are no annoying contracts and no commitments. You can
+                                    easily cancel your account online in two clicks. There are no cancellation fees —
+                                    start or stop your account anytime.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
+                                <button type="button" class="lihbtn" id="faq-question-5" aria-expanded="false"
+                                    aria-controls="faq-answer-5">
                                     <span>What can I watch on Netflix?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
+                                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime,
+                                    award-winning Netflix originals, and more. Watch as much as you want, anytime you
+                                    want.</p>
                             </div>
                         </li>
-                        <li>
+                        <li class="faq-item">
                             <h3>
-                                <button class="lihbtn">
+                                <button type="button" class="lihbtn" id="faq-question-6" aria-expanded="false"
+                                    aria-controls="faq-answer-6">
                                     <span>Is Netflix good for kids?</span>
-                                    <img src="assets/svgs/plus.svg" alt="plus" class="pl-svg">
-                                    <img src="assets/svgs/plus-sm.svg" alt="plus-sm" class="plsm-svg">
+                                    <img src="assets/svgs/plus.svg" alt="" class="pl-svg" aria-hidden="true">
+                                    <img src="assets/svgs/plus-sm.svg" alt="" class="plsm-svg" aria-hidden="true">
                                 </button>
                             </h3>
-                            <div class="lid">
-
+                            <div class="lid" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
+                                <p>The Netflix Kids experience is included in your membership to give parents control
+                                    while kids enjoy family-friendly TV shows and films in their own space.</p>
+                                <p>Kids profiles come with PIN-protected parental controls that let you restrict the
+                                    maturity rating of content kids can watch and block specific titles you don't want
+                                    kids to see.</p>
                             </div>
                         </li>
                     </ul>
@@ -208,6 +236,7 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

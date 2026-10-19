@@ -190,7 +190,8 @@ img {
     border-radius: 0.35rem;
 }
 
-.p1i1[type="button"] {
+.p1i1[type="button"],
+.p1i1[type="submit"] {
     padding: 0.85rem 1.25rem;
     box-sizing: border-box;
     border-style: none;
@@ -348,7 +349,7 @@ img {
     outline: 2px solid #000000;
     outline-offset: -2px;
     display: block;
-    background: url(download-animation.gif) center center no-repeat;
+    background: url(../assets/gifs/download-animation.gif) center center no-repeat;
     background-size: 100%;
     content: '';
     -webkit-box-flex: 0;
@@ -505,4 +506,49 @@ img {
     display: none;
     flex-shrink: 0;
     transform: rotate(0);
+}
+
+.faq-item.is-open .lid {
+    visibility: visible;
+    max-height: 40rem;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.faq-item.is-open .pl-svg,
+.faq-item.is-open .plsm-svg {
+    transform: rotate(45deg);
+}
+
+.lihbtn:focus-visible,
+.p1i1:focus-visible,
+.nav-signin a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.form-message {
+    min-height: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.form-message.is-error {
+    color: #ffb3b8;
+}
+
+.form-message.is-success {
+    color: #90ee90;
 }
