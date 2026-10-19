@@ -195,7 +195,8 @@ img {
     border-radius: 0.35rem;
 }
 
-.p1i1[type="button"] {
+.p1i1[type="button"],
+.p1i1[type="submit"] {
     padding: 0.85rem 1.25rem;
     box-sizing: border-box;
     border-style: none;
@@ -363,7 +364,7 @@ img {
     outline: 2px solid #000000;
     outline-offset: -2px;
     display: block;
-    background: url(download-animation.gif) center center no-repeat;
+    background: url(../assets/gifs/download-animation.gif) center center no-repeat;
     background-size: 100%;
     content: '';
     -webkit-box-flex: 0;
